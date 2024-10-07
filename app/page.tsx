@@ -1,8 +1,9 @@
+import Categories from "./components/Categories";
+
 export default function Home() {
   return (
-    <div className="">
-      Bnb
-      <h2 className="text-airbnb">Hello</h2>
+    <div className="max-w-[1500px] mx-auto px-6">
+      <Categories />
     </div>
   );
 }
