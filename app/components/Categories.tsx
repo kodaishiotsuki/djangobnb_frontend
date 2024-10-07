@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 const Categories = () => {
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState<string>("");
 
   const _setCategory = (_category: string) => {
     setCategory(_category);
