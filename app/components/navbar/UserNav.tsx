@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
+
 import MenuLink from "./MenuLink";
-import { useRouter } from "next/navigation";
+import useLoginModal from "@/app/hooks/useLoginModal";
 
 const UserNav = () => {
-  const router = useRouter();
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const loginModal = useLoginModal();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="p-2 relative inline-block border rounded-full">
@@ -44,34 +45,17 @@ const UserNav = () => {
         <div className="w-[220px] absolute top-[60px] right-0 bg-white border rounded-xl shadow-md flex flex-col cursor-pointer">
           <>
             <MenuLink
-              label="Inbox"
+              label="Log in"
               onClick={() => {
                 setIsOpen(false);
-                router.push("/inbox");
+                loginModal.open();
               }}
             />
 
             <MenuLink
-              label="My properties"
+              label="Sign up"
               onClick={() => {
                 setIsOpen(false);
-                router.push("/myproperties");
-              }}
-            />
-
-            <MenuLink
-              label="My favorites"
-              onClick={() => {
-                setIsOpen(false);
-                router.push("/myfavorites");
-              }}
-            />
-
-            <MenuLink
-              label="My reservations"
-              onClick={() => {
-                setIsOpen(false);
-                router.push("/myreservations");
               }}
             />
           </>

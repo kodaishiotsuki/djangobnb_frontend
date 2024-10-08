@@ -1,3 +1,5 @@
+"use client";
+
 import Categories from "./components/Categories";
 import PropertyList from "./components/properties/propertyList";
 
