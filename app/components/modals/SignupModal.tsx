@@ -20,7 +20,6 @@ const SignupModal = () => {
   const [error, setError] = useState<string[]>([]);
 
   //functions
-
   const submitSignup = async () => {
     const formData = {
       email: email,
